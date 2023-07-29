@@ -1,6 +1,197 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url(/media/font/Norse-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(/media/font/Roboto-Regular.ttf), url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
 * {
     box-sizing: border-box;
 
     /* For debugging */
     /* border: 1px solid red; */
+}
+
+:root {
+    --grey: #F9FAFB;
+    --white: #FDFDFD;
+    --primary-color: #596D48;
+    --input-light-border: #E5E7EB;
+    --input-error-outline: #ee4646;
+    --input-focus-outline: #3a7dfa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+}
+
+/* Sign Up Figure */
+.signUpFigure {
+    margin: 0;
+    position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+    .signUpFigure {
+        display: none;
+    }
+
+    #form-sign-up>h1 {
+        text-align: center;
+    }
+
+    .form-row {
+        justify-content: center;
+    }
+
+    #cta {
+        text-align: center;
+    }
+}
+
+.signUpFigure-logo {
+    position: absolute;
+    top: 20vh;
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px;
+
+    background-color: rgb(0, 0, 0, 50%);
+}
+
+.signUpFigure-logo-title {
+    color: var(--grey);
+    font-family: 'Norse Bold';
+    font-size: 4rem;
+}
+
+.signUpFigure-logo>img {
+    width: 80px;
+}
+
+.signUpFigure>figcaption {
+    position: absolute;
+    width: 100%;
+    bottom: 1vh;
+
+    color: var(--grey);
+    text-align: center;
+}
+
+.signUpFigure :is(a, a:visited) {
+    color: var(--grey);
+}
+
+.signUpFigure>img {
+    width: max(400px, 40vw);
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Form */
+#form-container {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+
+    background-color: var(--grey);
+}
+
+#form-sign-up {
+    background-color: white;
+    padding: 24px 32px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    ;
+}
+
+#form-sign-up>h1 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+
+.form-row {
+    margin-bottom: 24px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.form-column {
+    width: 300px;
+}
+
+/* Form control */
+label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+input {
+    width: 100%;
+    border: 1px solid var(--input-light-border);
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: 2px solid var(--input-focus-outline);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+input:focus:invalid {
+    outline: 2px solid var(--input-error-outline);
+}
+
+/* CTA section */
+#cta {
+    padding: 16px 32px;
+}
+
+#create-account {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    width: 240px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 16px;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+#create-account:hover {
+    filter: brightness(80%);
+}
+
+#cta :is(a, a:visited) {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#cta :is(a, a:visited):hover {
+    filter: brightness(50%);
 }

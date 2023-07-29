@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,61 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+    <main>
+        <figure class="signUpFigure">
+            <div class="signUpFigure-logo">
+                <img src="./media/asset/odin-lined.png" alt="Odin-logo">
+                <span class="signUpFigure-logo-title">ODIN</span>
+            </div>
+            <img src="./media/asset/green-leaf-plant.jpg" alt="green-leaf-plant">
+            <figcaption>
+                Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> 
+                on <a href="https://unsplash.com/photos/25xggax4bSA">Unsplash</a>
+            </figcaption>
+        </figure>
+        <div id="form-container">
+            <form action="https://httpbin.org/post" method="post" id="form-sign-up">
+                <h1>Let's do this!</h1>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name" autocomplete="given-name" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last-name" autocomplete="family-name" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="phone-number">Phone number</label>
+                        <input type="tel" pattern="\d*" name="phone-number" id="phone-number" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" autocomplete="new-password" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" name="confirm-password" id="confirm-password"
+                            autocomplete="new-password" required>
+                    </div>
+                </div>
+            </form>
+            <section id="cta">
+                <button type="submit" form="form-sign-up" id="create-account">Create Account</button>
+                <div>Already have an account? <a href="#">Log in</a></div>
+            </section>
+        </div>
+    </main>
 </body>
+
 </html>

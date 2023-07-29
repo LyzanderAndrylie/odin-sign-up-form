@@ -20,6 +20,8 @@ To check out full requirements, click this [link](https://www.theodinproject.com
 
 List of resources that helped me to create this project:
 
+1. [Responsive Web Design - Media Queries](https://www.w3schools.com/css/css_rwd_mediaqueries.asp)
+
 ## Attribution
 
 [Green Leaf Plant Backround](./media/asset/green-leaf-plant.jpg) is taken from <https://unsplash.com/photos/25xggax4bSA> by [Halie West](https://unsplash.com/@haliewestphoto)
