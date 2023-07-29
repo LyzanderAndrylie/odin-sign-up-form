@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Norse Bold';
-    src: url(/media/font/Norse-Bold.otf);
+    src: url(../media/font/Norse-Bold.otf);
     font-weight: bold;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url(/media/font/Roboto-Regular.ttf), url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    src: url(../media/font/Roboto-Regular.ttf), url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 }
 
 * {
